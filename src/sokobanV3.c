@@ -1,9 +1,9 @@
 /*
 ** sokobanV3.c for sokobanV3 in /home/TiphaineLaurent/PSU_2016_my_sokoban/sokobanV2/sokobanV3
-** 
+**
 ** Made by Tiphaine LAURENT
 ** Login   <TiphaineLaurent@epitech.net>
-** 
+**
 ** Started on  Mon Dec 19 22:47:09 2016 Tiphaine LAURENT
 ** Last update Tue Dec 27 14:51:26 2016 Tiphaine LAURENT
 */

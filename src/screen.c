@@ -1,14 +1,21 @@
 /*
 ** screen.c for screen in /home/TiphaineLaurent/PSU_2016_my_sokoban/sokobanV2/sokobanV3
-** 
+**
 ** Made by Tiphaine LAURENT
 ** Login   <TiphaineLaurent@epitech.net>
-** 
+**
 ** Started on  Mon Dec 19 22:58:30 2016 Tiphaine LAURENT
 ** Last update Thu Dec 22 18:27:39 2016 Tiphaine LAURENT
 */
 
 #include "my.h"
+
+static void init_colors(void)
+{
+	start_color();
+	init_pair(1, COLOR_WHITE, COLOR_BLACK);
+	attron(COLOR_PAIR(1));
+}
 
 int		init_screen(t_term *term_d)
 {
@@ -20,6 +27,7 @@ int		init_screen(t_term *term_d)
   curs_set(FALSE);
   nodelay(win, TRUE);
   keypad(stdscr, TRUE);
+  init_colors();
   getmaxyx(stdscr, term_d->max_y, term_d->max_x);
   term_d->start_time = time(NULL);
   return (0);

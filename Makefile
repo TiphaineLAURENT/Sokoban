@@ -9,8 +9,7 @@
 ##
 
 CC		=	gcc -o
-CFLAGS		=	-Wall -Wextra
-##CFLAGS	+=	-Werror
+CFLAGS		=	-Wall -Wextra -Werror
 ##CFLAGS	+=	-g3
 CPPFLAGS	+=	-I ./include
 
