@@ -1,9 +1,9 @@
 /*
 ** get_map.c for get_map in /home/TiphaineLaurent/PSU_2016_my_sokoban/sokobanV2/sokobanV3
-** 
+**
 ** Made by Tiphaine LAURENT
 ** Login   <TiphaineLaurent@epitech.net>
-** 
+**
 ** Started on  Mon Dec 19 23:46:00 2016 Tiphaine LAURENT
 ** Last update Thu Dec 22 23:59:39 2016 Tiphaine LAURENT
 */
@@ -41,7 +41,7 @@ t_map		**stock_map(char *buffer, int size)
 	  size = get_linelen(buffer);
 	  map[y] = malloc(sizeof(t_map) * size);
 	}
-      if (*buffer == 'P' || *buffer == 'X')
+      if (*buffer == PLAYER || *buffer == BOX)
 	map[y][x].obj2 = *buffer;
       else
 	map[y][x].obj = *buffer;
@@ -59,11 +59,11 @@ int		is_ok(char c, t_check *check, int i)
       check->x = 0;
       check->o = 0;
     }
-  if (c == 'P')
+  if (c == PLAYER)
     check->p += 1;
-  if (c == 'X')
+  if (c == BOX)
     check->x += 1;
-  if (c == 'O')
+  if (c == OBJECTIF)
     check->o += 1;
   if (check->p == 1 && check->x == check->o)
     return (1);

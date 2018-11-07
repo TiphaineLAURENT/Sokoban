@@ -1,9 +1,9 @@
 /*
 ** disp_map.c for disp_map in /home/TiphaineLaurent/PSU_2016_my_sokoban/sokobanV2/sokobanV3
-** 
+**
 ** Made by Tiphaine LAURENT
 ** Login   <TiphaineLaurent@epitech.net>
-** 
+**
 ** Started on  Tue Dec 20 12:55:14 2016 Tiphaine LAURENT
 ** Last update Tue Dec 27 14:51:10 2016 Tiphaine LAURENT
 */
@@ -28,8 +28,10 @@ int		disp_map(t_map **map, t_term *term_d)
 	      getmaxyx(stdscr, term_d->max_y, term_d->max_x);
 	      mvprintw(0, 0, "TEST");
 	      }*/
-	  mvprintw(y, x, "%c", map[y][x].obj);
-	  mvprintw(y, x, "%c", map[y][x].obj2);
+		if (map[y][x].obj)
+			mvprintw(y, x, "%c", map[y][x].obj);
+		else if (map[y][x].obj2)
+			mvprintw(y, x, "%c", map[y][x].obj2);
 	  x += 1;
 	}
       y += 1;

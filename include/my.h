@@ -1,9 +1,9 @@
 /*
 ** my.h for my in /home/TiphaineLaurent/PSU_2016_my_popup
-** 
+**
 ** Made by Tiphaine LAURENT
 ** Login   <TiphaineLaurent@epitech.net>
-** 
+**
 ** Started on  Mon Dec 12 12:27:29 2016 Tiphaine LAURENT
 ** Last update Tue Dec 27 14:51:39 2016 Tiphaine LAURENT
 */
@@ -20,6 +20,16 @@
 # include <dirent.h>
 # include <fcntl.h>
 # include <time.h>
+
+# define WALL '#'
+# define BOX 'X'
+# define OBJECTIF 'O'
+# define FREE ' '
+# define PLAYER 'P'
+
+typedef enum color_pair_e {
+	PLAYER_PAIR
+} color_pair_t;
 
 typedef	struct	s_term
 {

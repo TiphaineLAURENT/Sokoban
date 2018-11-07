@@ -13,8 +13,8 @@
 static void init_colors(void)
 {
 	start_color();
-	init_pair(1, COLOR_WHITE, COLOR_BLACK);
-	attron(COLOR_PAIR(1));
+	/* init_pair(1, COLOR_WHITE, COLOR_BLACK); */
+	init_pair(PLAYER_PAIR, COLOR_RED, COLOR_BLACK);
 }
 
 int		init_screen(t_term *term_d)
